@@ -29,7 +29,7 @@ jobs:
 
       # Publish only the static site files
       - name: Prepare site
-        run: rsync -a --exclude '.git' --exclude '.github' --exclude '.gitignore' ./ _site/
+        run: rsync -a --exclude '_site' --exclude '.git' --exclude '.github' --exclude '.gitignore' ./ _site/
 
       - name: Upload Website
         uses: actions/upload-pages-artifact@v4
